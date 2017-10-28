@@ -1,12 +1,10 @@
 function Arm() {
-this.x = player.x;
-this.y = player.y;
 this.size = 10;
 
 this.draw = function() {
 		fill(255);
-		rect(this.x, this.y, this.size, this.size/2);
+		rect(player.x, player.y, 20, 20);
+		console.log("drawn");
 	}
-
 
 }

@@ -1,0 +1,36 @@
+Script: Beginning of game;
+S: Who took all of my bones?!
+S: I will find them and kill whoever took my precious bones
+
+Boss 1: Before Battle
+S: did you take my bones ghost master?
+G: Hehe
+S: I will end you
+
+	After Battle
+G: Stop! Stop! I didn't do it!
+S: Then who did?!
+G: I have no idea.
+S: Ugh.
+
+Boss 2: Before Bottle
+S:Where are the rest of my bones Jack O'lantern?
+J: Haha! You'll never find them!
+	After battle
+S: Why would you take my bones?
+J: What?! Why would I take your bones?
+Wait what? If you didn't take them, then who did?
+J: No idea.
+
+Boss 3: Before Battle
+S: Mr. Sprinkles! It was you!
+MS: Mwahahaha! You will never get the rest of your bones.
+S: We will see about that
+
+	After Battle
+MS: Please, have mercy!
+S: Where are my bones?!
+MS: Okay Okay, I have them. Here you go.
+S: That's all I wanted.
+MS: Sigh.
+S: Nobody messes with the GOAT skeleton boy
