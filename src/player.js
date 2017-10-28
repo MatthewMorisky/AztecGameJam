@@ -12,18 +12,11 @@ class Player extends Thing {
 		//prevents the head from going off screen
 		this.x = constrain(this.x, 0, (wide-1));
 		this.y = constrain(this.y, 0, ((tall) - this.radius/2));
-
-		this.draw();
 		this.fall();
 		this.slow();
 		this.moving();
 	}
 
-	draw() {
-		enemy.update();
-		//fill(255);
-		//ellipse(this.x, this.y, this.radius, this.radius);
-	}
 	jump() {
 		this.yspeed = -8;
 	}

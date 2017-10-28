@@ -2,10 +2,10 @@ class Enemy extends Thing
 {
 	constructor(x, y, xspeed, yspeed, hitbox, img, name)
 	{
-
+		super(x,y,xspeed,yspeed,hitbox, img, name);
 		this.gravity = .2;
 		this.radius = 20;
-		super(x,y,xspeed,yspeed, gravity);
+	
 	}
 
 

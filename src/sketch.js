@@ -3,7 +3,6 @@ wide = 500;
 let drawList = [];
 
 function setup() {
-	enemy = new Enemy();
 	player = new Player();
 	//drawList.push(player);
 	createCanvas(wide, tall); 
