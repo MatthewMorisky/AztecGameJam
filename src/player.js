@@ -20,8 +20,14 @@ class Player extends Thing {
 	}
 
 	draw() {
+<<<<<<< HEAD
+		fill(255);
+		ellipse(this.x, this.y, this.radius, this.radius);
+		enemy.update();
+=======
 		//fill(255);
 		//ellipse(this.x, this.y, this.radius, this.radius);
+>>>>>>> 7d2d41d9c14d67e3bad94d613498c47e4dd1ebb0
 	}
 	jump() {
 		this.yspeed = -8;
