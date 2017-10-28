@@ -5,6 +5,8 @@ function Player() {
 	this.yspeed = 0;
 	this.radius = 40;
 	this.gravity = .2;
+	this.friction = .90;
+	this.isMoving = false;
 
 	this.update = function() {
 		this.x = this.x + this.xspeed;
@@ -19,7 +21,7 @@ function Player() {
 		fill(255);
 		ellipse(this.x, this.y, this.radius, this.radius);
 	}
-	this.jumping = function() {
+	this.jump = function() {
 		this.yspeed = -8;
 	}
 	this.fall = function() {
@@ -27,4 +29,16 @@ function Player() {
 			this.yspeed += this.gravity;
 		}
 	}
+	this.move = function(dir) {
+		this.xspeed = dir;
+	}
+	this.slow = function() {
+		if ((player.xspeed > .00001) || (player.xspeed < -.00001)) {
+			player.move(player.xspeed * this.friction);
+		}
+	}
+	this.armThrow = function() {
+		arm = new Arm();
+	}
+
 }
