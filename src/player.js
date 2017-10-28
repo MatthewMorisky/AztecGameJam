@@ -35,7 +35,7 @@ class Player extends Thing {
 		this.xspeed = dir;
 	}
 	slow() {
-		if ((player.xspeed > .00001) || (player.xspeed < -.00001)) {
+		if (Math.abs(player.xspeed < .00001)) {
 			player.move(player.xspeed * this.friction);
 		}
 	}
