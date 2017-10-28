@@ -10,7 +10,6 @@ function setup() {
 function draw() {
 	background(51);
 	player.update();
-	this.moving();
 }
 function keyPressed() {
 	if (keyCode === UP_ARROW) {

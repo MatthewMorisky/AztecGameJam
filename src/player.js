@@ -1,6 +1,6 @@
-class Player extends Thing {
+class Player /* extends Thing */ {
 	constructor(x, y) {
-		super
+		//super
 		this.x = 250;
 		this.y = 250;
 		this.xspeed = 0;
@@ -49,11 +49,11 @@ class Player extends Thing {
 		arm.draw();
 	}
 	moving() {
-	if (keyIsDown(LEFT_ARROW)) {
-		player.move(-3);
+		if (keyIsDown(LEFT_ARROW)) {
+			player.move(-3);
+		}
+		else if (keyIsDown(RIGHT_ARROW)) {
+			player.move(3);
+		}
 	}
-	else if (keyIsDown(RIGHT_ARROW)) {
-		player.move(3);
-	}
-}
 }
