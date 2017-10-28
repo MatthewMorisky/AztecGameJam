@@ -35,7 +35,6 @@ class Player extends Thing {
 	}
 	armThrow() {
 		let arm = new Arm();
-		arm.draw();
 	}
 	moving() {
 		if (keyIsDown(LEFT_ARROW)) {

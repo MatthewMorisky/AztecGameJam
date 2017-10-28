@@ -28,7 +28,7 @@ class Thing {
 			if(this.y + this.yspeed + this.hitbox.top > di.y + di.hitbox.bottom) continue;
 			if(this.y + this.yspeed + this.hitbox.bottom < di.y + di.hitbox.top) continue;
 
-			collide(di);
+			this.collide(di);
 		}
 	}
 

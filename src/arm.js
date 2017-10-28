@@ -1,14 +1,11 @@
-class Arm {
-	constructor(x,y) {
+class Arm extends Thing {
+	constructor(x, y) {
+		super(x, y, 10, 0, new Hitbox(0,0,0,0), 'img/BoneCollectable.gif', 'arm')
 		this.size = 10;
-		this.x = 20;
-		this.y = 20;
+		this.x = player.x;
+		this.y = player.y;
 	}
 
-	draw() {
-		fill(255);
-		rect(this.x, this.y, 70, 70);
-		console.log("drawn");
-	}
+	
 
 }
