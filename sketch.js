@@ -1,17 +1,19 @@
-
+tall = 500;
+wide = 500;
 
 function setup() {
-
-	createCanvas(500, 500); 
+	player = new Player();
+	createCanvas(wide, tall); 
 }
 
 function draw() {
 	background(51);
-	
+	player.update();
+	player.draw();
 }
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-		
+		player.jump();
 	}
 	else if (keyCode === DOWN_ARROW) {
 		
