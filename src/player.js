@@ -20,8 +20,6 @@ class Player extends Thing {
 	}
 
 	draw() {
-		fill(255);
-		ellipse(this.x, this.y, this.radius, this.radius);
 		enemy.update();
 		//fill(255);
 		//ellipse(this.x, this.y, this.radius, this.radius);
@@ -38,7 +36,7 @@ class Player extends Thing {
 		this.xspeed = dir;
 	}
 	slow() {
-		if (Math.abs(player.xspeed < .00001)) {
+		if (Math.abs(player.xspeed) > .00001) {
 			player.move(player.xspeed * this.friction);
 		}
 	}

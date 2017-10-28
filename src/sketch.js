@@ -5,16 +5,13 @@ let drawList = [];
 function setup() {
 	enemy = new Enemy();
 	player = new Player();
-	drawList.push(player);
+	//drawList.push(player);
 	createCanvas(wide, tall); 
-	
 	
 }
 
 function draw() {
 	background(51);
-	enemy.update();
-	player.update();
 	
 	for(let i=0;i<drawList.length;i++) {
 		drawList[i].update();
