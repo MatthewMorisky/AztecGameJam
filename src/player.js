@@ -1,18 +1,13 @@
-class Player /* extends Thing */ {
+class Player extends Thing {
 	constructor(x, y) {
-		//super
-		this.x = 250;
-		this.y = 250;
-		this.xspeed = 0;
-		this.yspeed = 0;
+		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
 	}
 
 	update() {
-		this.x = this.x + this.xspeed;
-		this.y = this.y + this.yspeed;
+		super.update();
 
 		//prevents the head from going off screen
 		this.x = constrain(this.x, 0, (wide-1));
@@ -25,8 +20,8 @@ class Player /* extends Thing */ {
 	}
 
 	draw() {
-		fill(255);
-		ellipse(this.x, this.y, this.radius, this.radius);
+		//fill(255);
+		//ellipse(this.x, this.y, this.radius, this.radius);
 	}
 	jump() {
 		this.yspeed = -8;
