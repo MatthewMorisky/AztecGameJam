@@ -1,17 +1,22 @@
 tall = 500;
 wide = 500;
+let drawList = [];
 
 function setup() {
 	player = new Player();
+	drawList.push(player);
 	createCanvas(wide, tall); 
-	frameRate(1);
+	
 	
 }
 
 function draw() {
 	background(51);
-	player.update();
+	for(let i=0;i<drawList.length;i++) {
+		drawList[i].update();
+	}
 }
+
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
 		player.jump();
