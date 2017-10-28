@@ -4,6 +4,7 @@ wide = 500;
 function setup() {
 	player = new Player();
 	createCanvas(wide, tall); 
+	frameRate(1);
 	
 }
 
@@ -17,10 +18,10 @@ function keyPressed() {
 
 	}
 	else if (keyCode === DOWN_ARROW) {
-		
+
 	}
 	else if (keyCode === 32) { //Spacebar
-		
+
 	}
 	else if (keyCode === 88) { //X key
 		player.armThrow();

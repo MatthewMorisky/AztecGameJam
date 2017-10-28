@@ -45,7 +45,7 @@ class Player /* extends Thing */ {
 		}
 	}
 	armThrow() {
-		arm = new Arm();
+		let arm = new Arm();
 		arm.draw();
 	}
 	moving() {
@@ -56,4 +56,5 @@ class Player /* extends Thing */ {
 			player.move(3);
 		}
 	}
+
 }

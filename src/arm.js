@@ -1,9 +1,12 @@
-function Arm() {
-this.size = 10;
-
-this.draw = function() {
+class Arm {
+	constructor(x,y) {
+	this.size = 10;
+	this.x = 20;
+	this.y = 20;
+}
+draw() {
 		fill(255);
-		rect(player.x, player.y, 20, 20);
+		rect(this.x, this.y, 70, 70);
 		console.log("drawn");
 	}
 
