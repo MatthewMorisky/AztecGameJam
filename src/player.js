@@ -1,4 +1,4 @@
-class Player extends Stoppable {
+class Player extends Thing {
 	constructor(x, y) {
 		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
 		this.radius = 40;
@@ -6,7 +6,7 @@ class Player extends Stoppable {
 		this.friction = .90;
 		this.isRight = true;
 		this.hasArm = true;
-		this.jumpLimit=1;
+		this.jumpLimit=10;
 		this.jumpCount = this.jumpLimit;
 		
 	}

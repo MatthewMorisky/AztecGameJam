@@ -1,5 +1,5 @@
-tall = 500;
-wide = 500;
+tall = 640;
+wide = 1111;
 let drawList = [];
 
 function setup() {
@@ -8,9 +8,9 @@ function setup() {
 	//ground = new Ground(100,100);
 	//ground1 = new Ground(200,200);
 	//ground2 = new Ground(300,300);
-	ground3 = new Ground(400,400);
-	//score = new ScoreBoard();
-	//bone = new Bone(50,50)
+	//ground3 = new Ground(400,400);
+	scoreBoard = new ScoreBoard();
+	bone = new Bone(50,50)
 
 	createCanvas(wide, tall); 
 	
@@ -22,6 +22,7 @@ function draw() {
 	for(let i=0;i<drawList.length;i++) {
 		drawList[i].update();
 	}
+	scoreBoard.draw();
 }
 
 function keyPressed() {
@@ -29,7 +30,7 @@ function keyPressed() {
 	 {
 	 	if(player.jumpCount>0)
 	 	{
-		player.yspeed=-7;
+		player.yspeed=-9;
 		player.jumpCount--;
 		}
 	}
