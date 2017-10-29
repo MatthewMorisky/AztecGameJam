@@ -18,6 +18,9 @@ class Torso extends Thing
 		{
 			player.level = 2;
 			player.changeImage('img/BonyWithTorsoAndArmRight.png');
+			player.y -= 40;
+			player.hitbox = new Hitbox (0,0, 37, 74);
+			this.delete();
 		}
 
 	}

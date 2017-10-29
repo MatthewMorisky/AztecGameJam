@@ -76,7 +76,15 @@ class Player extends Stoppable {
 		if (keyIsDown(RIGHT_ARROW)) 
 		{
 			player.move(3);
-			this.changeImage('img/BoneRollRight.gif');
+			if (player.level === 1) {
+				this.changeImage('img/BoneRollRight.gif');
+			}
+			else if ((player.level === 2) && (this.hasArm)) {
+				this.changeImage('img/HopRight.gif');
+			}
+			else if ((player.level === 2) && (!this.hasArm)) {
+				this.changeImage('img/HopRightNoArm.gif');
+			}
 			this.isRight = true;
 			if(!this.isOnTop) {
 				this.jumpCount=0;
@@ -85,7 +93,15 @@ class Player extends Stoppable {
 		else if (keyIsDown(LEFT_ARROW)) 
 		{
 			player.move(-3);
-			this.changeImage('img/BoneRollLeft.gif');
+			if (player.level === 1) {
+				this.changeImage('img/BoneRollLeft.gif');
+			}
+			else if ((player.level === 2) && (this.hasArm)) {
+				this.changeImage('img/HopLeft.gif');
+			}
+			else if ((player.level === 2) && (!this.hasArm)) {
+				this.changeImage('img/HopLeftNoArm.gif');
+			}
 			this.isRight = false;
 			if(!this.isOnTop) {
 				this.jumpCount=0;
