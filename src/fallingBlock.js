@@ -15,7 +15,8 @@ class FallingBlock extends Thing
 	{
 		if(obj.name === 'player')
 		{
-			this.changeImage('img/BreakawayGif.gif');
+			this.changeImage('img/BGif.gif');
+			
 		}
 	}
 } 

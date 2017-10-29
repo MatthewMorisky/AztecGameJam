@@ -1,19 +1,7 @@
 class Player extends Stoppable {
 	constructor(x, y) {
-<<<<<<< HEAD
-		super(x, y, 0, 0, new Hitbox(0, 0, 37, 37), 'img/BoneMainCharacter.png', 'player');
-=======
-		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/LookRight.png', 'player');
->>>>>>> refs/remotes/origin/master
-		this.radius = 40;
-		this.gravity = .2;
-		this.friction = .90;
-		this.isRight = true;
-		this.hasArm = true;
-		this.jumpLimit=1;
-		this.jumpCount = this.jumpLimit;
-		this.isOnTop = false;
-		this.level = 1;
+
+		super(x, y, 0, 0, new Hitbox(0, 0, 37, 37), 'img/LookRight.png', 'player');
 		
 	}
 
