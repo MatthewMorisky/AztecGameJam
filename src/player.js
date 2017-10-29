@@ -1,6 +1,6 @@
 class Player extends Stoppable {
 	constructor(x, y) {
-		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
+		super(x, y, 0, 0, new Hitbox(0, 0, 37, 37), 'img/BoneMainCharacter.png', 'player');
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
@@ -40,11 +40,17 @@ class Player extends Stoppable {
 			this.move(this.xspeed * this.friction);
 		}
 		if (Math.abs(this.xspeed) < 1) {
-			if (this.isRight === true) {
-				this.changeImage('img/BoneMainCharacter.png');
+			if ((this.isRight === true) && (this.level === 1)) {
+				this.changeImage('img/LookRight.png');
 			}
-			if (this.isRight === false) {
+			if ((this.isRight === false) && (this.level === 1)) {
 				this.changeImage('img/LookLeft.png')
+			}
+			if ((this.isRight === true) && (this.level === 2)) {
+				this.changeImage('img/BonyWithTorsoAndArmRight.png')
+			}
+			if ((this.isRight === false) && (this.level === 2)) {
+				this.changeImage('img/BonyWithTorsoAndArmLeft.png')
 			}
 		}
 	}
