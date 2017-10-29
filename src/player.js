@@ -22,6 +22,7 @@ class Player extends Stoppable {
 		this.slow();
 		this.moving();
 
+
 	}
 
 	fall() {
@@ -53,16 +54,26 @@ class Player extends Stoppable {
 		}
 	}
 	moving() {
-		if (keyIsDown(LEFT_ARROW)) {
-			player.move(-3);
-			this.changeImage('img/BoneRollLeft.gif');
-			this.isRight = false;
-		}
-		else if (keyIsDown(RIGHT_ARROW)) {
+		
+		if (keyIsDown(RIGHT_ARROW)) 
+		{
 			player.move(3);
 			this.changeImage('img/BoneRollRight.gif');
 			this.isRight = true;
+			if(this.isColliding) {
+				this.jumpCount=0;
+			}
 		}
+		else if (keyIsDown(LEFT_ARROW)) 
+		{
+			player.move(-3);
+			this.changeImage('img/BoneRollLeft.gif');
+			this.isRight = false;
+			if(this.isColliding) {
+				this.jumpCount=0;
+			}
+		}
+		
 	}
 	collide(obj)
 	{
