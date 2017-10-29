@@ -17,6 +17,7 @@ class Torso extends Thing
 		if(obj.name === 'player')
 		{
 			player.level = 2;
+			player.changeImage('img/BonyWithTorsoAndArmRight.png');
 		}
 
 	}

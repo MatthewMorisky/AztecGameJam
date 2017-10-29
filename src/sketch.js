@@ -17,7 +17,10 @@ function setup() {
 	ground8 = new Ground(400,height);
 	ground9 = new Ground(440,height);
 	ground0 = new Ground(480,height);
-	bone = new Bone(400,height - 30)
+
+	torso = new Torso(480, height - 40);
+	bone = new Bone(400,height - 30);
+	fallingBlock = new FallingBlock(600, height);
 	scoreBoard = new ScoreBoard();
 
 	new Cement('lvls/Bonelevel1.json');
