@@ -11,6 +11,10 @@ class Thing {
 		image(this.img, this.x, this.y);
 	}
 
+	changeImage(newImage) {
+		this.img = loadImage(newImage);
+	}
+
 	update() {
 		this.checkCollision();
 
