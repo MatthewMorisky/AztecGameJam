@@ -1,5 +1,5 @@
-tall = 500;
-wide = 500;
+tall = 640;
+wide = 1111;
 let drawList = [];
 
 function setup() {
