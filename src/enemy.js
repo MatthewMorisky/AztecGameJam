@@ -15,8 +15,7 @@ class Enemy extends Thing
 		}
 	}
 	draw() {
-		fill(255);
-		ellipse(this.x, this.y, this.radius, this.radius);
+
 	}
 	update() {
 		console.log(this.x, this.y);
