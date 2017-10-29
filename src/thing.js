@@ -45,7 +45,6 @@ class Thing {
 
 	collide(obj) {
 		// extended...
-		console.log(this.name);
 	}
 
 	delete() {

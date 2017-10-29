@@ -17,6 +17,10 @@ class FallingBlock extends Thing
 		{
 			this.changeImage('img/BGif.gif');
 			
+			setTimeout(() => {
+				this.delete();
+			},250)
+
 		}
 	}
 } 
