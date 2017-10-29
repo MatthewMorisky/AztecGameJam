@@ -65,6 +65,7 @@ class Player extends Stoppable {
 	}
 	collide(obj)
 	{
+		console.log("player collided");
 		if(obj.name == 'ground')
 			this.jumpCount = this.jumpLimit;
 	}

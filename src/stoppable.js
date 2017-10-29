@@ -3,7 +3,7 @@ class Stoppable extends Thing
 	constructor(x, y)
 	{
 
-		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), undefined, 'stoppable'); //fix images
+		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/Blank.png', 'stoppable'); //fix images
 	
 	}
 
@@ -13,20 +13,20 @@ class Stoppable extends Thing
 			if(di.name === this.name) continue;
 			if(this.x + this.xspeed + this.hitbox.right > di.x + di.hitbox.left) 
 			{
-				this.collide(di,di.hitbox.left);
+				this.collide(di,this.hitbox.left);
 
 			}
 			if(this.x + this.xspeed + this.hitbox.left < di.x + di.hitbox.right) 
 			{
-				this.collide(di,di.hitbox.right);
+				this.collide(di,this.hitbox.right);
 			}
 			if(this.y + this.yspeed + this.hitbox.top > di.y + di.hitbox.bottom) 
 			{
-				this.collide(di,di.hitbox.top);
+				this.collide(di,this.hitbox.top);
 			}
 			if(this.y + this.yspeed + this.hitbox.bottom < di.y + di.hitbox.top) 
 			{
-				this.collide(di,di.hitbox.bottom);
+				this.collide(di,this.hitbox.bottom);
 			}
 
 			
@@ -35,6 +35,8 @@ class Stoppable extends Thing
 
 	collide(obj, num)
 	{
+		console.log()
+		/*
 		if(num == this.hitbox.top || num == this.hitbox.bottom)
 		{
 			this.yspeed = 0;
@@ -43,5 +45,6 @@ class Stoppable extends Thing
 		{
 			this.yspeed = 0;
 		}
+		*/
 	}
 }
