@@ -5,8 +5,8 @@ class Hitbox {
 		this.width = width;
 		this.height = height;
 
-		this.right = this.x;
-		this.left = this.x + this.width;
+		this.left = this.x;
+		this.right = this.x + this.width;
 		this.top = this.y;
 		this.bottom = this.y + this.height;
 	}

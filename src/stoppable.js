@@ -1,13 +1,13 @@
 class Stoppable extends Thing 
 {
-	constructor(x, y)
+	constructor(x, y, xspeed, yspeed, hitbox, img, name)
 	{
 
-		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/Blank.png', 'stoppable'); //fix images
+		super(x, y, 0, 0, hitbox, img, name); //fix images
 	
 	}
 
-	checkCollision() {
+	/*checkCollision() {
 		for(let i=0;i<drawList.length;i++) {
 			let di = drawList[i];
 			if(di.name === this.name) continue;
@@ -31,11 +31,32 @@ class Stoppable extends Thing
 
 			
 		}
-	}
+	}*/
 
-	collide(obj, num)
+	collide(obj)
 	{
-		console.log()
+		if(obj.name === 'ground') {
+			console.log("abo");
+			let k = 15;
+			console.log(this.yspeed);
+			if(obj.y + obj.hitbox.bottom < this.y + this.hitbox.top + k && this.yspeed < 0) {
+				this.y = obj.y + obj.hitbox.bottom - this.hitbox.height;
+				this.yspeed = 0;
+				console.log("BOTTOMMMM");
+			}
+			if(obj.x + obj.hitbox.left > this.x + this.hitbox.right - k) {
+				this.x = obj.x + obj.hitbox.left - this.hitbox.right;
+				console.log("shwibby");
+				this.xspeed = 0;
+			} else if(obj.x + obj.hitbox.right < this.x + this.hitbox.left + k) {
+				this.x = obj.x + obj.hitbox.right - this.hitbox.left;
+				this.xspeed = 0;
+			} else if(obj.y + obj.hitbox.top > this.y + this.hitbox.bottom - k) {
+				this.y = obj.y + obj.hitbox.top - this.hitbox.height;
+				this.yspeed = 0;
+				console.log('toppppp');
+			} 
+		}
 		/*
 		if(num == this.hitbox.top || num == this.hitbox.bottom)
 		{
