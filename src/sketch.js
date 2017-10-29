@@ -19,6 +19,8 @@ function setup() {
 	ground0 = new Ground(480,height);
 	bone = new Bone(400,height - 30)
 	scoreBoard = new ScoreBoard();
+
+	new Cement('lvls/Bonelevel1.json');
 	
 
 	createCanvas(wide, tall); 
