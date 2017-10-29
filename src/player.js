@@ -8,7 +8,7 @@ class Player extends Stoppable {
 		this.hasArm = true;
 		this.jumpLimit=1;
 		this.jumpCount = this.jumpLimit;
-		this.isColliding = false;
+		this.isOnTop = false;
 		
 	}
 
@@ -21,7 +21,7 @@ class Player extends Stoppable {
 		this.fall();
 		this.slow();
 		this.moving();
-
+		this.isOnTop = false;
 
 	}
 
@@ -60,7 +60,7 @@ class Player extends Stoppable {
 			player.move(3);
 			this.changeImage('img/BoneRollRight.gif');
 			this.isRight = true;
-			if(this.isColliding) {
+			if(!this.isOnTop) {
 				this.jumpCount=0;
 			}
 		}
@@ -69,7 +69,7 @@ class Player extends Stoppable {
 			player.move(-3);
 			this.changeImage('img/BoneRollLeft.gif');
 			this.isRight = false;
-			if(this.isColliding) {
+			if(!this.isOnTop) {
 				this.jumpCount=0;
 			}
 		}
@@ -81,7 +81,7 @@ class Player extends Stoppable {
 		if(obj.name == 'ground')
 		{
 
-			if(this.isColliding) {
+			if(this.isOnTop) {
 				this.jumpCount = this.jumpLimit;
 			}
 		}
