@@ -5,6 +5,7 @@ class Thing {
 		this.xspeed = xspeed || 0;
 		this.yspeed = yspeed || 0;
 		this.hitbox = hitbox;
+		this.id = Math.floor(Math.random()*10000000);
 
 		this.changeImage(img);
 		this.name = name;
@@ -41,6 +42,13 @@ class Thing {
 		// extended...
 	}
 
-
+	delete() {
+		for(let i=0;i<drawList.length;i++) {
+			if(drawList[i].id === this.id) {
+				drawList[i].splice(i, 1);
+				break;
+			}
+		}
+	}
 
 }
