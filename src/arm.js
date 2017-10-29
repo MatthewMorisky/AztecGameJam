@@ -1,8 +1,7 @@
 class Arm extends Thing {
 
 	constructor(x, y) {
-		super(x, y, 10, 0, new Hitbox(0,0,0,0), 'img/BoneCollectable.gif', 'arm')
-		this.size = 10;
+		super(x, y, 10, 0, new Hitbox(0,0,0,0), 'img/BoneAttack.gif', 'arm')
 		this.x = player.x;
 		this.y = player.y;
 		this.distance = 0;
