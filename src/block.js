@@ -22,8 +22,7 @@ class Block extends Thing
 		console.log(obj.name);
 		if(obj.name === 'arm')
 		{
-			obj.delete();
-			this.delete();
+			this.changeImage('img/LitPumpkin.png');
 		}
 
 	}
