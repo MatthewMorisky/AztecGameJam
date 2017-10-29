@@ -1,7 +1,8 @@
 tall = 640;
 wide = 1111;
 let drawList = [];
-let height = 350
+let height = 350;
+let lvl;
 
 function setup() {
 	player = new Player(80,height - 80);
@@ -23,7 +24,7 @@ function setup() {
 	fallingBlock = new FallingBlock(600, height);
 	scoreBoard = new ScoreBoard();
 
-	new Cement('lvls/Bonelevel1.json');
+	lvl = new Cement(Bonelevel1);
 	
 
 	createCanvas(wide, tall); 
@@ -37,6 +38,7 @@ function draw() {
 		drawList[i].update();
 	}
 	scoreBoard.draw();
+	lvl.shift(10);
 }
 
 function keyPressed() {
