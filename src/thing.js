@@ -6,6 +6,7 @@ class Thing {
 		this.yspeed = yspeed || 0;
 		this.hitbox = hitbox;
 		this.id = Math.floor(Math.random()*10000000);
+		this.stoppable = false;
 
 		this.changeImage(img);
 		this.name = name;
@@ -43,6 +44,10 @@ class Thing {
 
 	collide(obj) {
 		// extended...
+		if(this.stoppable)
+		{
+			obj
+		}
 	}
 
 	delete() {

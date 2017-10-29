@@ -20,7 +20,7 @@ class Ground extends Thing
 	{
 		if(obj.name === 'player')
 		{
-			this.delete();
+			//this.delete();
 		}
 	}
 }

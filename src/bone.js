@@ -4,7 +4,7 @@ class Bone extends Thing
 	{
 
 		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneCollectable.gif', 'bone');
-		
+		this.stoppable = true;
 	
 	}
 	update() {
