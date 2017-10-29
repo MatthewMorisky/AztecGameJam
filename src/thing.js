@@ -45,7 +45,7 @@ class Thing {
 	delete() {
 		for(let i=0;i<drawList.length;i++) {
 			if(drawList[i].id === this.id) {
-				drawList[i].splice(i, 1);
+				drawList.splice(i, 1);
 				break;
 			}
 		}

@@ -19,7 +19,7 @@ turnAbout() {
 		this.distance = -21;
 		this.xspeed = -this.xspeed;
 	}
-	else if (this.distance = -1) {
+	else if (this.distance == -1) {
 		this.delete();
 	}
 }
