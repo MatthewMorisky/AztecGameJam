@@ -17,6 +17,7 @@ function setup() {
 	ground8 = new Ground(400,height);
 	ground9 = new Ground(440,height);
 	ground0 = new Ground(480,height);
+	breaker = new BreakBlock(520, 270);
 
 	torso = new Torso(480, height - 40);
 	bone = new Bone(400,height - 30);
