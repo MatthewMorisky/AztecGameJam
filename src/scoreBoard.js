@@ -1,8 +1,17 @@
 
-class ScoreBoard  {
-	constructor() {
+class ScoreBoard  
+{
+	
+	constructor() 
+	{
 		this.score = 0;
 		this.maxScore = 206;
-	//document.write(this.score + '/' + this.maxScore);
+	}
+	draw()
+	{
+
+		fill(255);
+		textFont("Verdana",18);
+		text(`Bones Collected: ${this.score} / ${this.maxScore}`, 2, 17);
 	}
 }

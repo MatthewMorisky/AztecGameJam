@@ -16,8 +16,8 @@ class Bone extends Thing
 		
 		if(obj.name === 'arm' || obj.name === 'player')
 		{
-			score.score++;
-			console.log(score.score);
+			scoreBoard.score++;
+			console.log(scoreBoard.score);
 			this.delete();
 		}
 
