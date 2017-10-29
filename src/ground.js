@@ -1,4 +1,4 @@
-class Ground extends Thing 
+class Ground extends Block 
 {
 	constructor(x, y)
 	{

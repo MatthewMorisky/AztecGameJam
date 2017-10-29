@@ -6,8 +6,7 @@ class Player extends Thing {
 		this.friction = .90;
 		this.isRight = true;
 		this.hasArm = true;
-		this.jumpRate = .4
-		this.jumpLimit=3;
+		this.jumpLimit=1;
 		this.jumpCount = this.jumpLimit;
 	}
 
