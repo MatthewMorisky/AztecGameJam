@@ -1,13 +1,14 @@
 class Player extends Stoppable {
 	constructor(x, y) {
-		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
+		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
 		this.isRight = true;
 		this.hasArm = true;
-		this.jumpLimit=10;
+		this.jumpLimit=1;
 		this.jumpCount = this.jumpLimit;
+		this.isColliding = false;
 		
 	}
 
@@ -67,7 +68,14 @@ class Player extends Stoppable {
 	{
 		super.collide(obj);
 		if(obj.name == 'ground')
-			this.jumpCount = this.jumpLimit;
+		{
+
+			if(this.isColliding) {
+				this.jumpCount = this.jumpLimit;
+			}
+		}
+			
+
 	}
 	
 

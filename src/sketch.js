@@ -3,14 +3,15 @@ wide = 1111;
 let drawList = [];
 
 function setup() {
-	player = new Player();
+	player = new Player(100,80);
 	//block = new Block();
-	//ground = new Ground(100,100);
-	//ground1 = new Ground(200,200);
-	//ground2 = new Ground(300,300);
-	ground3 = new Ground(400,400);
+	ground = new Ground(100,200);
+	ground1 = new Ground(180,200);
+	ground2 = new Ground(260,200);
+	ground3 = new Ground(340,200);
+	bone = new Bone(500,100)
 	scoreBoard = new ScoreBoard();
-	bone = new Bone(50,50)
+	
 
 	createCanvas(wide, tall); 
 	
@@ -28,9 +29,9 @@ function draw() {
 function keyPressed() {
 	if (keyCode === UP_ARROW)
 	 {
-	 	if(player.jumpCount>0)
+	 	if((player.jumpCount>0))
 	 	{
-		player.yspeed=-9;
+		player.yspeed=-8;
 		player.jumpCount--;
 		}
 	}
