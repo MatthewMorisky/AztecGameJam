@@ -5,6 +5,7 @@ class Player extends Thing {
 		this.gravity = .2;
 		this.friction = .90;
 		this.isRight = true;
+		this.hasArm = true;
 	}
 
 	update() {
@@ -44,7 +45,10 @@ class Player extends Thing {
 		}
 	}
 	armThrow() {
-		let arm = new Arm();
+		if (this.hasArm) {
+			let arm = new Arm();
+			this.hasArm = false;
+		}
 	}
 	moving() {
 		if (keyIsDown(LEFT_ARROW)) {

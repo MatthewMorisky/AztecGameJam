@@ -5,7 +5,10 @@ class Arm extends Thing {
 		this.x = player.x;
 		this.y = player.y;
 		this.distance = 0;
+		this.maxDistance = 20;
+
 		this.isRight = player.isRight;
+		this.isReturning = false;
 		if (this.isRight) {
 			this.xspeed = 10;
 		}
@@ -17,17 +20,26 @@ class Arm extends Thing {
 
 		super.update();
 		this.throw();
-
 	}
 throw() {
 	this.distance++
-		if (this.distance > 20) {
+		if (this.distance > this.maxDistance) {
+			this.isReturning = true;
 			this.distance = -21;
 			this.xspeed = -this.xspeed;
 		}
-		else if (this.distance == -1) {
-			this.delete();
+		else if (this.isReturning) {
+		
 		}
 	}
+collide(obj) {
+	if ((obj.name === 'player') && (this.isReturning)) {
+		player.hasArm = true;
+		this.delete();
+		this.isReturning = false;
+	}
+
+
+}
 }
 	
