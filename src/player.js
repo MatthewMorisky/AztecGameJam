@@ -8,6 +8,8 @@ class Player extends Thing {
 		this.hasArm = true;
 		this.jumpLimit=1;
 		this.jumpCount = this.jumpLimit;
+		this.score = 0;
+		this.MaxScore = 206;
 	}
 
 	update() {
