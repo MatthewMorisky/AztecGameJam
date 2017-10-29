@@ -14,7 +14,10 @@ class Thing {
 	}
 
 	changeImage(newImage) {
-		this.img = newImage[newImage.length-1] === 'f' ? loadGif(newImage) : loadImage(newImage);
+		if(this.imgUrl !== newImage) {
+			this.img = newImage[newImage.length-1] === 'f' ? loadGif(newImage) : loadImage(newImage);
+			this.imgUrl = newImage;
+		}
 	}
 
 	update() {

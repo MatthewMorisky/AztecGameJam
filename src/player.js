@@ -28,9 +28,13 @@ class Player extends Thing {
 	move(dir) {
 		this.xspeed = dir;
 	}
+
 	slow() {
-		if (Math.abs(player.xspeed) > .00001) {
-			player.move(player.xspeed * this.friction);
+		if (Math.abs(this.xspeed) > .00001) {
+			this.move(this.xspeed * this.friction);
+		}
+		if (Math.abs(this.xspeed) < 1) {
+			this.changeImage('img/BoneMainCharacter.png');
 		}
 	}
 	armThrow() {
@@ -39,9 +43,11 @@ class Player extends Thing {
 	moving() {
 		if (keyIsDown(LEFT_ARROW)) {
 			player.move(-3);
+			this.changeImage('img/BoneRollLeft.gif');
 		}
 		else if (keyIsDown(RIGHT_ARROW)) {
 			player.move(3);
+			this.changeImage('img/BoneRollRight.gif');
 		}
 	}
 
