@@ -81,9 +81,11 @@ class Player extends Stoppable {
 			}
 			else if ((player.level === 2) && (this.hasArm)) {
 				this.changeImage('img/HopRight.gif');
+				console.log(this.y);
 			}
 			else if ((player.level === 2) && (!this.hasArm)) {
 				this.changeImage('img/HopRightNoArm.gif');
+				
 			}
 			this.isRight = true;
 			if(!this.isOnTop) {
@@ -97,7 +99,7 @@ class Player extends Stoppable {
 				this.changeImage('img/BoneRollLeft.gif');
 			}
 			else if ((player.level === 2) && (this.hasArm)) {
-				this.changeImage('img/HopLeft.gif');
+				this.changeImage('img/BonyWithTorsoAndArmLeft.gif');
 			}
 			else if ((player.level === 2) && (!this.hasArm)) {
 				this.changeImage('img/HopLeftNoArm.gif');

@@ -50,7 +50,7 @@ function keyPressed() {
 
 	}
 	else if (keyCode === 32) { //Spacebar
-
+		console.log(player.y);
 	}
 	else if ((keyCode === 88) && (player.level >= 2)) { //X key
 		player.armThrow();
