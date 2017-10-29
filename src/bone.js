@@ -14,10 +14,11 @@ class Bone extends Thing
 	}
 	collide(obj)
 	{
-		console.log("Score is 1");
+		
 		if(obj.name === 'arm' || obj.name === 'player')
 		{
-			//Increment score by 1
+			score.score++;
+			console.log(score.score);
 			this.delete();
 		}
 
