@@ -1,20 +1,24 @@
 class Block extends Thing 
 {
-	constructor(x, y, xspeed, yspeed, hitbox, img, name)
+	constructor(x, y)
 	{
-		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/UnlitPumpkin.gif', 'block');
+		
+		super(70, 70, 0, 0, new Hitbox(0, 0, 40, 40), 'img/UnlitPumpkin.png', 'block');
 		this.sideLength = 40;
 	
 	}
 	update() {
-		console.log(this.x, this.y);
-		this.x = this.x + this.xspeed;
-		this.y = this.y + this.yspeed;
-		this.draw();
 		super.update();
+		console.log(this.x, this.y);
+		this.draw();
+		
 		
 	}
 	draw() {
 
+	}
+	collide(obj)
+	{
+		console.log("collided");
 	}
 }

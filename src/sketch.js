@@ -4,7 +4,7 @@ let drawList = [];
 
 function setup() {
 	player = new Player();
-	//drawList.push(player);
+	block = new Block();
 	createCanvas(wide, tall); 
 	
 }

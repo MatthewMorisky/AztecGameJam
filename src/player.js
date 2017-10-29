@@ -4,6 +4,7 @@ class Player extends Thing {
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
+		this.isRight = true;
 	}
 
 	update() {
@@ -34,7 +35,12 @@ class Player extends Thing {
 			this.move(this.xspeed * this.friction);
 		}
 		if (Math.abs(this.xspeed) < 1) {
-			this.changeImage('img/BoneMainCharacter.png');
+			if (this.isRight === true) {
+				this.changeImage('img/BoneMainCharacter.png');
+			}
+			if (this.isRight === false) {
+				this.changeImage('img/LookLeft.png')
+			}
 		}
 	}
 	armThrow() {
@@ -44,10 +50,12 @@ class Player extends Thing {
 		if (keyIsDown(LEFT_ARROW)) {
 			player.move(-3);
 			this.changeImage('img/BoneRollLeft.gif');
+			this.isRight = false;
 		}
 		else if (keyIsDown(RIGHT_ARROW)) {
 			player.move(3);
 			this.changeImage('img/BoneRollRight.gif');
+			this.isRight = true;
 		}
 	}
 
