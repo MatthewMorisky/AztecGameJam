@@ -16,7 +16,7 @@ class Torso extends Thing
 		
 		if(obj.name === 'player')
 		{
-			player.isLvl2 = true;
+			player.level = 2;
 		}
 
 	}
