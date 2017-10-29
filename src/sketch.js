@@ -13,9 +13,9 @@ function setup() {
 	ground4 = new Ground(240,height);
 	//ground5 = new Ground(280,height);
 	ground6 = new Ground(320,height);
-	//ground7 = new Ground(360,height);
+	ground7 = new Ground(360,height);
 	ground8 = new Ground(400,height);
-	//ground9 = new Ground(440,height);
+	ground9 = new Ground(440,height);
 	ground0 = new Ground(480,height);
 	bone = new Bone(400,height - 30)
 	scoreBoard = new ScoreBoard();
