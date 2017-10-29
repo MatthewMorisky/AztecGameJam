@@ -17,8 +17,13 @@ function setup() {
 	ground8 = new Ground(400,height);
 	ground9 = new Ground(440,height);
 	ground0 = new Ground(480,height);
+<<<<<<< HEAD
 	torso = new Torso(480, height - 40);
 	bone = new Bone(400,height - 30);
+=======
+	fallingBlock = new FallingBlock(600, height);
+	bone = new Bone(400,height - 30)
+>>>>>>> refs/remotes/origin/master
 	scoreBoard = new ScoreBoard();
 	
 
