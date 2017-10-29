@@ -55,10 +55,10 @@ class Stoppable extends Thing
 				this.y = obj.y + obj.hitbox.top - this.hitbox.height;
 				this.yspeed = 0;
 				console.log('toppppp');
-				this.isColliding = true;
+				this.isOnTop = true;
 			} 
 			else {
-				this.isColliding = false;
+				this.isOnTop = false;
 			}
 		}
 		/*
