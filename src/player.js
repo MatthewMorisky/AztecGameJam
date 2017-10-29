@@ -1,10 +1,7 @@
 class Player extends Stoppable {
 	constructor(x, y) {
-<<<<<<< HEAD
-		super(x, y, 0, 0, new Hitbox(0, 0, 37, 37), 'img/BoneMainCharacter.png', 'player');
-=======
 		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/LookRight.png', 'player');
->>>>>>> refs/remotes/origin/master
+
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
@@ -44,7 +41,7 @@ class Player extends Stoppable {
 			this.move(this.xspeed * this.friction);
 		}
 		if (Math.abs(this.xspeed) < 1) {
-			
+
 			if ((this.isRight === true) && (this.level === 1)) {
 				this.changeImage('img/LookRight.png');
 			}
