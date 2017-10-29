@@ -19,7 +19,6 @@ function draw() {
 
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-		player.jump();
 
 	}
 	else if (keyCode === DOWN_ARROW) {

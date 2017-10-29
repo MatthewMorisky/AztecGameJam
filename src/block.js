@@ -9,7 +9,6 @@ class Block extends Thing
 	}
 	update() {
 		super.update();
-		console.log(this.x, this.y);
 		this.draw();
 		
 		

@@ -6,6 +6,8 @@ class Player extends Thing {
 		this.friction = .90;
 		this.isRight = true;
 		this.hasArm = true;
+		this.jumpRate = .4
+		this.canJump = true;
 	}
 
 	update() {
@@ -17,10 +19,23 @@ class Player extends Thing {
 		this.fall();
 		this.slow();
 		this.moving();
+		this.jump();
+
 	}
 
 	jump() {
-		this.yspeed = -8;
+		if(keyIsDown(UP_ARROW))
+		{
+			if(this.yspeed>-8 && this.canJump)
+				this.yspeed -= this.jumpRate;
+			else
+				this.canJump = false;
+
+		}
+		if(Math.abs(this.yspeed) <.001)
+		{
+			this.canJump = true;
+		}
 	}
 	fall() {
 		if (this.yspeed <= 15) {
