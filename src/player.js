@@ -1,6 +1,6 @@
 class Player extends Thing {
 	constructor(x, y) {
-		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneRollLeft.gif', 'player');
+		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
@@ -8,8 +8,7 @@ class Player extends Thing {
 		this.hasArm = true;
 		this.jumpLimit=1;
 		this.jumpCount = this.jumpLimit;
-		this.score = 0;
-		this.MaxScore = 206;
+		
 	}
 
 	update() {
