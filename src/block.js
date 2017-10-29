@@ -2,7 +2,7 @@ class Block extends Thing
 {
 	constructor(x, y)
 	{
-		
+
 		super(70, 70, 0, 0, new Hitbox(0, 0, 40, 40), 'img/UnlitPumpkin.png', 'block');
 		this.sideLength = 40;
 	
@@ -19,6 +19,12 @@ class Block extends Thing
 	}
 	collide(obj)
 	{
-		console.log("collided");
+		console.log(obj.name);
+		if(obj.name === 'arm')
+		{
+			obj.delete();
+			this.delete();
+		}
+
 	}
 }
