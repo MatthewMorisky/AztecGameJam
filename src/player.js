@@ -1,6 +1,6 @@
 class Player extends Stoppable {
 	constructor(x, y) {
-		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
+		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/LookRight.png', 'player');
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;
@@ -79,7 +79,7 @@ class Player extends Stoppable {
 	collide(obj)
 	{
 		super.collide(obj);
-		if(obj.name == 'ground')
+		if(obj.standable)
 		{
 
 			if(this.isOnTop) {
