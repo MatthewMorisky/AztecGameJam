@@ -9,6 +9,7 @@ class Player extends Stoppable {
 		this.jumpLimit=1;
 		this.jumpCount = this.jumpLimit;
 		this.isOnTop = false;
+		this.level = 1;
 		
 	}
 
