@@ -51,11 +51,17 @@ class Player extends Stoppable {
 			if ((this.isRight === false) && (this.level === 1)) {
 				this.changeImage('img/LookLeft.png')
 			}
-			if ((this.isRight === true) && (this.level === 2)) {
+			if ((this.isRight === true) && (this.level === 2) && (this.hasArm)) {
 				this.changeImage('img/BonyWithTorsoAndArmRight.png')
 			}
-			if ((this.isRight === false) && (this.level === 2)) {
+			if ((this.isRight === false) && (this.level === 2) && (this.hasArm)) {
 				this.changeImage('img/BonyWithTorsoAndArmLeft.png')
+			}
+			if ((this.isRight === true) && (this.level === 2) && (!this.hasArm)) {
+				this.changeImage('img/BonyWithTorsoRight.png')
+			}
+			if ((this.isRight === false) && (this.level === 2) && (!this.hasArm)) {
+				this.changeImage('img/BonyWithTorsoLeft.png')
 			}
 		}
 	}
