@@ -9,17 +9,24 @@ class Cement {
 	
 	init() {
 		this.level.Ground.tile.forEach((gp) => {
-			this.blocks.push(new Ground((gp['-x']*40) - this.scroll, gp['-y']*40));
+			if(gp.x < this.width / 40) {
+				this.blocks.push(new Ground((gp['-x']*40) - this.scroll, gp['-y']*40));
+			}
 		});
 		this.level.Platform.tile.forEach((gp) => {
-			this.blocks.push(new Ground((gp['-x']*40 - this.scroll, gp['-y']*40)));
+			if(gp.x < this.width / 40) {
+				this.blocks.push(new Ground((gp['-x']*40 - this.scroll, gp['-y']*40)));
+			}
 		})
 	}
 
 	shift(delta) {
 		this.scroll += delta;
-		this.blocks.forEach((gp) => {
+		this.blocks.forEach((gp, i) => {
 			gp.x -= delta;
-		})
+			if(gp.x < this.scroll || gp.x > this.scroll + this.width) {
+				this.blocks.splice(i, 1);
+			}
+		});
 	}
 }

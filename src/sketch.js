@@ -40,7 +40,6 @@ function draw() {
 		drawList[i].update();
 	}
 	scoreBoard.draw();
-	lvl.shift(10);
 }
 
 function keyPressed() {
