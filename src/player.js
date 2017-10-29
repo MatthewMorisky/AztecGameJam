@@ -41,7 +41,7 @@ class Player extends Stoppable {
 		}
 		if (Math.abs(this.xspeed) < 1) {
 			if (this.isRight === true) {
-				this.changeImage('img/BoneMainCharacter.png');
+				this.changeImage('img/LookRight.png');
 			}
 			if (this.isRight === false) {
 				this.changeImage('img/LookLeft.png')
