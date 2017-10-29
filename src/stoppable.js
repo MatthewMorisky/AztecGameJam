@@ -35,7 +35,7 @@ class Stoppable extends Thing
 
 	collide(obj)
 	{
-		if(obj.name === 'ground') {
+		if(obj.standable) {
 			let k = 10;
 			if(obj.y + obj.hitbox.bottom < this.y + this.hitbox.top + k && this.yspeed < 0) {
 				this.y = obj.y + obj.hitbox.bottom - this.hitbox.height;

@@ -1,9 +1,9 @@
-class fallingBlock extends Thing 
+class FallingBlock extends Thing 
 {
 	constructor(x, y)
 	{
-		super(x,y,0,0,new Hitbox(0,0,120,40), 'img/MyEmotions.png', 'ground');
-
+		super(x,y,0,0,new Hitbox(0,0,120,40), 'img/BreakawayPlatform.png', 'fallingBlock');
+		this.standable=true;
 		
 	
 	}
@@ -11,14 +11,11 @@ class fallingBlock extends Thing
 		super.update();
 		
 	}
-	draw(){
-
-	}
 	collide(obj)
 	{
 		if(obj.name === 'player')
 		{
-			//this.delete();
+			this.changeImage('img/BreakawayGif.gif');
 		}
 	}
-}
+} 

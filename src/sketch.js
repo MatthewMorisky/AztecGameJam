@@ -17,6 +17,7 @@ function setup() {
 	ground8 = new Ground(400,height);
 	ground9 = new Ground(440,height);
 	ground0 = new Ground(480,height);
+	fallingBlock = new FallingBlock(600, height);
 	bone = new Bone(400,height - 30)
 	scoreBoard = new ScoreBoard();
 	

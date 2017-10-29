@@ -7,6 +7,7 @@ class Thing {
 		this.hitbox = hitbox;
 		this.id = Math.floor(Math.random()*10000000);
 		this.stoppable = false;
+		this.standable = false;
 
 		this.changeImage(img);
 		this.name = name;
