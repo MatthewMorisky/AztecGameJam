@@ -2,7 +2,7 @@ class Block extends Thing
 {
 	constructor(x, y, xspeed, yspeed, hitbox, img, name)
 	{
-		super(x,y,xspeed,yspeed,hitbox, img, name);
+		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/UnlitPumpkin.gif', 'block');
 		this.sideLength = 40;
 	
 	}
@@ -13,5 +13,8 @@ class Block extends Thing
 		this.draw();
 		super.update();
 		
+	}
+	draw() {
+
 	}
 }
