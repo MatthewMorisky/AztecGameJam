@@ -23,7 +23,7 @@ function setup() {
 	fallingBlock = new FallingBlock(600, height);
 	scoreBoard = new ScoreBoard();
 	
-
+	frameRate(60);
 	createCanvas(wide, tall); 
 	
 }
