@@ -36,25 +36,21 @@ class Stoppable extends Thing
 	collide(obj)
 	{
 		if(obj.name === 'ground') {
-			console.log("abo");
-			let k = 15;
-			console.log(this.yspeed);
+			let k = 10;
 			if(obj.y + obj.hitbox.bottom < this.y + this.hitbox.top + k && this.yspeed < 0) {
 				this.y = obj.y + obj.hitbox.bottom - this.hitbox.height;
 				this.yspeed = 0;
-				console.log("BOTTOMMMM");
-			}
-			if(obj.x + obj.hitbox.left > this.x + this.hitbox.right - k) {
+			} else if(obj.x + obj.hitbox.left > this.x + this.hitbox.right - k
+				&& obj.y + obj.hitbox.top < this.y + this.hitbox.bottom) {
 				this.x = obj.x + obj.hitbox.left - this.hitbox.right;
-				console.log("shwibby");
 				this.xspeed = 0;
-			} else if(obj.x + obj.hitbox.right < this.x + this.hitbox.left + k) {
+			} else if(obj.x + obj.hitbox.right < this.x + this.hitbox.left + k
+				&& obj.y + obj.hitbox.top < this.y + this.hitbox.bottom) {
 				this.x = obj.x + obj.hitbox.right - this.hitbox.left;
 				this.xspeed = 0;
 			} else if(obj.y + obj.hitbox.top > this.y + this.hitbox.bottom - k) {
 				this.y = obj.y + obj.hitbox.top - this.hitbox.height;
 				this.yspeed = 0;
-				console.log('toppppp');
 				this.isOnTop = true;
 			} 
 			else {
