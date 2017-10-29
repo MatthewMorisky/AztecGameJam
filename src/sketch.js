@@ -8,7 +8,7 @@ function setup() {
 	//ground = new Ground(100,100);
 	//ground1 = new Ground(200,200);
 	//ground2 = new Ground(300,300);
-	//ground3 = new Ground(400,400);
+	ground3 = new Ground(400,400);
 	scoreBoard = new ScoreBoard();
 	bone = new Bone(50,50)
 
