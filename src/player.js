@@ -1,4 +1,4 @@
-class Player extends Thing {
+class Player extends Stoppable {
 	constructor(x, y) {
 		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneMainCharacter.png', 'player');
 		this.radius = 40;

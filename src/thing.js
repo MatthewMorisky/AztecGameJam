@@ -44,10 +44,6 @@ class Thing {
 
 	collide(obj) {
 		// extended...
-		if(this.stoppable)
-		{
-			obj
-		}
 	}
 
 	delete() {
