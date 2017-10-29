@@ -2,6 +2,18 @@ class Player extends Stoppable {
 	constructor(x, y) {
 
 		super(x, y, 0, 0, new Hitbox(0, 0, 37, 37), 'img/LookRight.png', 'player');
+
+
+		this.radius = 40;
+		this.gravity = .2;
+		this.friction = .90;
+		this.isRight = true;
+		this.hasArm = true;
+		this.jumpLimit=1;
+		this.jumpCount = this.jumpLimit;
+		this.isOnTop = false;
+		this.level = 1;
+
 		
 	}
 
@@ -32,7 +44,7 @@ class Player extends Stoppable {
 			this.move(this.xspeed * this.friction);
 		}
 		if (Math.abs(this.xspeed) < 1) {
-			
+
 			if ((this.isRight === true) && (this.level === 1)) {
 				this.changeImage('img/LookRight.png');
 			}
