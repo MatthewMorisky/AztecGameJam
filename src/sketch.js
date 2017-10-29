@@ -10,6 +10,8 @@ function setup() {
 	ground2 = new Ground(300,300);
 	ground3 = new Ground(400,400);
 	score = new ScoreBoard();
+	bone = new Bone(50,50)
+
 	createCanvas(wide, tall); 
 	
 }
