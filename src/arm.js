@@ -5,7 +5,7 @@ class Arm extends Thing {
 		this.x = player.x;
 		this.y = player.y;
 		this.distance = 0;
-		this.maxDistance = 20;
+		this.maxDistance = 27;
 
 		this.isRight = player.isRight;
 		this.isReturning = false;
@@ -32,7 +32,6 @@ throw() {
 		}
 		else if (this.distance > this.maxDistance) {
 			this.isReturning = true;
-			this.distance = -21;
 			this.xspeed = -this.xspeed;
 		}
 		
