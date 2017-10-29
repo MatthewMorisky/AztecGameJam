@@ -4,7 +4,11 @@ let drawList = [];
 
 function setup() {
 	player = new Player();
-	block = new Block();
+	//block = new Block();
+	ground = new Ground(100,100);
+	ground1 = new Ground(200,200);
+	ground2 = new Ground(300,300);
+	ground3 = new Ground(400,400);
 	createCanvas(wide, tall); 
 	
 }
@@ -18,8 +22,13 @@ function draw() {
 }
 
 function keyPressed() {
-	if (keyCode === UP_ARROW) {
-
+	if (keyCode === UP_ARROW)
+	 {
+	 	if(player.jumpCount>0)
+	 	{
+		player.yspeed=-7;
+		player.jumpCount--;
+		}
 	}
 	else if (keyCode === DOWN_ARROW) {
 

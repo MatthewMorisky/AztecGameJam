@@ -7,7 +7,8 @@ class Player extends Thing {
 		this.isRight = true;
 		this.hasArm = true;
 		this.jumpRate = .4
-		this.canJump = true;
+		this.jumpLimit=3;
+		this.jumpCount = this.jumpLimit;
 	}
 
 	update() {
@@ -19,24 +20,9 @@ class Player extends Thing {
 		this.fall();
 		this.slow();
 		this.moving();
-		this.jump();
 
 	}
 
-	jump() {
-		if(keyIsDown(UP_ARROW))
-		{
-			if(this.yspeed>-8 && this.canJump)
-				this.yspeed -= this.jumpRate;
-			else
-				this.canJump = false;
-
-		}
-		if(Math.abs(this.yspeed) <.001)
-		{
-			this.canJump = true;
-		}
-	}
 	fall() {
 		if (this.yspeed <= 15) {
 			this.yspeed += this.gravity;
@@ -77,5 +63,11 @@ class Player extends Thing {
 			this.isRight = true;
 		}
 	}
+	collide(obj)
+	{
+		if(obj.name == 'ground')
+			this.jumpCount = this.jumpLimit;
+	}
+	
 
 }
