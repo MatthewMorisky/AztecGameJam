@@ -1,6 +1,10 @@
 class Player extends Thing {
 	constructor(x, y) {
+<<<<<<< HEAD
 		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneRollLeft.gif', 'player');
+=======
+		super(250, 250, 0, 0, new Hitbox(0, 0, 40, 40), 'img/BoneRollRight.gif', 'player');
+>>>>>>> 6c567da679b4876906562e103d74d49ab363276a
 		this.radius = 40;
 		this.gravity = .2;
 		this.friction = .90;

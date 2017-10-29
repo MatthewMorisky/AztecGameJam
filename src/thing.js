@@ -5,14 +5,15 @@ class Thing {
 		this.xspeed = xspeed || 0;
 		this.yspeed = yspeed || 0;
 		this.hitbox = hitbox;
-		this.img = loadImage(img);
+
+		this.changeImage(img);
 		this.name = name;
 		drawList.push(this); // eww?
 		image(this.img, this.x, this.y);
 	}
 
 	changeImage(newImage) {
-		this.img = loadImage(newImage);
+		this.img = newImage[newImage.length-1] === 'f' ? loadGif(newImage) : loadImage(newImage);
 	}
 
 	update() {
