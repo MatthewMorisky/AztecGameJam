@@ -23,20 +23,24 @@ class Arm extends Thing {
 	}
 throw() {
 	this.distance++
-		if (this.distance > this.maxDistance) {
+		if (this.isReturning) {
+			let dX = (player.x - this.x);
+			let dY = (player.y - this.y);
+			let mag = Math.sqrt(dX*dX+dY*dY);
+			this.xspeed =  (dX/mag) * 5;
+			this.yspeed =  (dY/mag) * 5;
+		}
+		else if (this.distance > this.maxDistance) {
 			this.isReturning = true;
 			this.distance = -21;
 			this.xspeed = -this.xspeed;
 		}
-		else if (this.isReturning) {
 		
-		}
 	}
 collide(obj) {
 	if ((obj.name === 'player') && (this.isReturning)) {
 		player.hasArm = true;
 		this.delete();
-		this.isReturning = false;
 	}
 
 
