@@ -1,4 +1,4 @@
-class Block extends Thing 
+class Pumpkin extends Thing 
 {
 	constructor(x, y)
 	{
