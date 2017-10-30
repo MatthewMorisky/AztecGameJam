@@ -9,7 +9,6 @@ class Torso extends Thing
 	update() {
 		super.update();
 		
-		
 	}
 	collide(obj)
 	{
