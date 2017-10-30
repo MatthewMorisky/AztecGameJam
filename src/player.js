@@ -99,7 +99,7 @@ class Player extends Stoppable {
 				this.changeImage('img/BoneRollLeft.gif');
 			}
 			else if ((player.level === 2) && (this.hasArm)) {
-				this.changeImage('img/BonyWithTorsoAndArmLeft.gif');
+				this.changeImage('img/HopLeft.gif');
 			}
 			else if ((player.level === 2) && (!this.hasArm)) {
 				this.changeImage('img/HopLeftNoArm.gif');
