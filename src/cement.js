@@ -14,10 +14,15 @@ class Cement {
 			}
 		});
 		this.level.Platform.tile.forEach((gp) => {
-
 			if(gp['-x'] < this.width / 40) {
 				this.blocks.push(new Ground(gp['-x']*40 - this.scroll, gp['-y']*40));
 			}
+		})
+		this.level.Breakaway.tile.forEach((gp) => {
+			if(gp['-x'] < this.width / 40) {
+				this.blocks.push(new FallingBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+			}
+
 		})
 	}
 
@@ -41,7 +46,6 @@ class Cement {
 			}
 		})
 
-
 		this.level.Platform.tile.forEach((gp) => {
 			if(this.scroll % 40 == 0
 				&& (gp['-x'] == Math.floor(this.scroll / 40)
@@ -50,5 +54,12 @@ class Cement {
 			}
 		})
 
+		this.level.Breakaway.tile.forEach((gp) => {
+			if(this.scroll % 40 == 0
+				&& (gp['-x'] == Math.floor(this.scroll / 40)
+				|| gp['-x'] == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new FallingBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+			}
+		})
 	}
 }
