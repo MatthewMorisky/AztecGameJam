@@ -57,6 +57,7 @@ class Cement {
 
 	shift(delta) {
 		this.scroll += delta;
+		bg.x -= delta / 2;
 		let i = 0;
 		this.blocks.forEach((gp) => {
 			gp.x -= delta;
