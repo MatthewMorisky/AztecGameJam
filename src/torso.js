@@ -20,7 +20,7 @@ class Torso extends Thing
 			player.y -= 40;
 			player.hitbox = new Hitbox (0,0, 10, 74);
 			scoreBoard.score += 50;
-			dialog.WriteDialog
+			dialog.setDialog('Press x throw your arm');
 			this.delete();
 		}
 

@@ -25,12 +25,13 @@ function setup() {
 }
 
 function draw() {
-	background(51);
+	background(0);
 	
 	for(let i=0;i<drawList.length;i++) {
 		drawList[i].update();
 	}
 	scoreBoard.draw();
+	dialog.writeDialog();
 }
 
 function keyPressed() {

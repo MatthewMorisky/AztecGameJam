@@ -20,14 +20,13 @@ class Player extends Stoppable {
 
 	update() {
 		super.update();
-
-		//prevents the head from going off screen
-		this.x = constrain(this.x, 0, (wide-1));
-		this.y = constrain(this.y, 0, ((tall) - this.radius/2));
 		this.fall();
 		this.slow();
 		this.moving();
 		this.isOnTop = false;
+
+		this.fallOff();
+
 
 	}
 
@@ -140,7 +139,11 @@ class Player extends Stoppable {
 		this.y = this.saveY;
 
 	}
-
+	fallOff()
+	{
+		if(this.y>640)
+			this.die();
+	}
 
 	
 
