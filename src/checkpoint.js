@@ -16,7 +16,6 @@ class Checkpoint extends Thing
 	
 	collide(obj)
 	{
-		console.log(obj.name);
 		if(obj.name === 'player')
 		{
 			if(this.hasNotChecked){

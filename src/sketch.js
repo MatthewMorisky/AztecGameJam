@@ -3,8 +3,10 @@ wide = 1111;
 let drawList = [];
 let height = 350;
 let lvl;
+let bg;
 
 function setup() {
+	bg = new Thing(0,0,0,0,new Hitbox(-100,-100,0,0), 'img/background1-1.png', 'background');
 	player = new Player(80,500);
 	//block = new Block();
 	checkpoint0 = new Checkpoint(120,height-80, 0);
