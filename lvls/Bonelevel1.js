@@ -170,11 +170,11 @@ const Bonelevel1 = {
           "-y": "480"
         }
       ],
-      "Torso": {
+      "Torso": [{
         "-id": "5",
         "-x": "8600",
         "-y": "520"
-      }
+      }]
     },
     "Ground": {
       "-tileset": "Ground",

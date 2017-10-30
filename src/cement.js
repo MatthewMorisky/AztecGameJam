@@ -30,6 +30,28 @@ class Cement {
 			}
 
 		})
+		this.level.Breaker.tile.forEach((gp) => {
+			if(gp['-x'] < this.width / 40) {
+				this.blocks.push(new BreakBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+			}
+		})
+
+		this.level.objects.Fireball.forEach((gp) => {
+			if(gp['-x'] < this.width) {
+				new Fireball(gp['-x'] - this.scroll, gp['-y']);
+			}
+		})
+
+		this.level.objects.BoneCollectable.forEach((gp) => {
+			if(gp['-x'] < this.width) {
+				this.blocks.push(new Bone(gp['-x'] - this.scroll, gp['-y']));
+			}
+		})
+		this.level.objects.Torso.forEach((gp) => {
+			if(gp['-x'] < this.width) {
+				this.blocks.push(new Torso(gp['-x'] - this.scroll, gp['-y']));
+			}
+		})
 		
 	}
 
@@ -76,5 +98,38 @@ class Cement {
 				this.blocks.push(new FallingBlock(gp['-x']*120 - this.scroll, gp['-y']*40));
 			}
 		})
+
+		this.level.Breaker.tile.forEach((gp) => {
+			if(this.scroll % 40 == 0
+				&& (gp['-x'] == Math.floor(this.scroll / 40)
+				|| gp['-x'] == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new BreakBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+			}
+		})
+
+		this.level.objects.Fireball.forEach((gp) => {
+			if(this.scroll % 40 == 0
+				&& (Math.floor(gp['-x'] / 40) == Math.floor(this.scroll / 40)
+				|| Math.floor(gp['-x'] / 40) == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new Fireball(gp['-x'] - this.scroll, 1*gp['-y']));
+			}
+		})
+
+		this.level.objects.BoneCollectable.forEach((gp) => {
+			if(this.scroll % 40 == 0
+				&& (Math.floor(gp['-x'] / 40) == Math.floor(this.scroll / 40)
+				|| Math.floor(gp['-x'] / 40) == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new Bone(gp['-x'] - this.scroll, 1*gp['-y']));
+			}
+		})
+
+		this.level.objects.Torso.forEach((gp) => {
+			if(this.scroll % 40 == 0
+				&& (Math.floor(gp['-x'] / 40) == Math.floor(this.scroll / 40)
+				|| Math.floor(gp['-x'] / 40) == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new Torso(gp['-x'] - this.scroll, 1*gp['-y']));
+			}
+		})
+
 	}
 }
