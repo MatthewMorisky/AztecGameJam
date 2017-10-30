@@ -3,19 +3,17 @@ class Block extends Thing
 	constructor(x, y)
 	{
 
-		super(70, 70, 0, 0, new Hitbox(0, 0, 40, 40), 'img/UnlitPumpkin.png', 'block');
+		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/UnlitPumpkin.png', 'pumpkin');
 		this.sideLength = 40;
 	
 	}
 	update() {
 		super.update();
-		this.draw();
+		
 		
 		
 	}
-	draw() {
-
-	}
+	
 	collide(obj)
 	{
 		console.log(obj.name);

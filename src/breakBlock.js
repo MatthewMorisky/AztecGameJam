@@ -15,7 +15,11 @@ class BreakBlock extends Thing
 	{
 		if(obj.name === 'arm')
 		{
-			this.delete();
+			this.changeImage('img/BGif.gif');
+			
+			setTimeout(() => {
+				this.delete();
+			},250)
 		}
 	}
 }
