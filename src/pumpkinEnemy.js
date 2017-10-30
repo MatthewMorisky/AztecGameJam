@@ -40,7 +40,7 @@ class PumpkinEnemy extends Enemy
 		}
 		if(obj.name=='player')
 		{
-			obj.delete(); //MAKE PLAYER DIE
+			obj.die(); //MAKE PLAYER DIE
 		}
 		if(obj.name == 'arm')
 		{
