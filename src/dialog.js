@@ -13,3 +13,4 @@ class Dialog
 		textFont("Verdana",18);
 		text(dialogText, 2, 500);
 	}
+}
