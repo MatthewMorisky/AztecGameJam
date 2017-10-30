@@ -28,6 +28,7 @@ class Player extends Stoppable {
 		this.slow();
 		this.moving();
 		this.isOnTop = false;
+		
 
 	}
 

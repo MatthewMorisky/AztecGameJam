@@ -29,6 +29,7 @@ function draw() {
 		drawList[i].update();
 	}
 	scoreBoard.draw();
+	dialog.writeDialog();
 }
 
 function keyPressed() {
