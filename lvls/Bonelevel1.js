@@ -153,11 +153,11 @@ const Bonelevel1 = {
           "-y": "80"
         }
       ],
-      "GhostBoss": {
+      "GhostBoss": [{
         "-id": "3",
         "-x": "9600",
         "-y": "0"
-      },
+      }],
       "CheckPoint": [
         {
           "-id": "4",
