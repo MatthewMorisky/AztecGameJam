@@ -9,7 +9,6 @@ class Torso extends Thing
 	update() {
 		super.update();
 		
-		
 	}
 	collide(obj)
 	{
@@ -21,14 +20,9 @@ class Torso extends Thing
 			player.y -= 40;
 			player.hitbox = new Hitbox (0,0, 10, 74);
 			scoreBoard.score += 50;
-			this.textHelper;
+			dialog.WriteDialog
 			this.delete();
 		}
 
-	}
-	textHelper() {
-		fill(255);
-		textFont("Verdana",18);
-		text(`Press x to throw your arm`, 2, 500);
 	}
 }

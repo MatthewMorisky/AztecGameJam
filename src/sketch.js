@@ -15,6 +15,7 @@ function setup() {
 	bone = new Bone(400,height - 30);
 	//fallingBlock = new FallingBlock(600, height);
 	scoreBoard = new ScoreBoard();
+	dialog = new Dialog();
 
 	lvl = new Cement(Bonelevel1);
 	
@@ -45,7 +46,7 @@ function keyPressed() {
 
 	}
 	else if (keyCode === 32) { //Spacebar
-		console.log(player.y);
+		dialog.advanceDialog();
 	}
 	else if ((keyCode === 88) && (player.level >= 2)) { //X key
 		player.armThrow();
