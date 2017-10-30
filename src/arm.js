@@ -41,6 +41,10 @@ collide(obj) {
 		player.hasArm = true;
 		this.delete();
 	}
+	if(obj.standable)
+	{
+		this.isReturning = true;
+	}
 
 
 }

@@ -18,6 +18,7 @@ class PumpkinEnemy extends Enemy
 	
 	update() {
 		super.update();
+		this.fall();
 		
 	}
 
@@ -40,6 +41,10 @@ class PumpkinEnemy extends Enemy
 		if(obj.name=='player')
 		{
 			obj.delete(); //MAKE PLAYER DIE
+		}
+		if(obj.name == 'arm')
+		{
+			this.delete();
 		}
 	}
 	switch()

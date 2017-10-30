@@ -20,6 +20,7 @@ class Torso extends Thing
 			player.changeImage('img/BonyWithTorsoAndArmRight.png');
 			player.y -= 40;
 			player.hitbox = new Hitbox (0,0, 37, 74);
+			scoreBoard.score += 50;
 			this.delete();
 		}
 
