@@ -125,9 +125,9 @@ class Cement {
 
 		this.level.objects.Torso.forEach((gp) => {
 			if(this.scroll % 40 == 0
-				&& (Math.floor(gp['-x'] / 40) == Math.floor(this.scroll / 120)
-				|| Math.floor(gp['-x'] / 40) == Math.floor((this.scroll + this.width) / 120))) {
-				this.blocks.push(new Torso(gp['-x'] - this.scroll, gp['-y']));
+				&& (Math.floor(gp['-x'] / 40) == Math.floor(this.scroll / 40)
+				|| Math.floor(gp['-x'] / 40) == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new Torso(gp['-x'] - this.scroll, 1*gp['-y']));
 			}
 		})
 
