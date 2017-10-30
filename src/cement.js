@@ -19,8 +19,8 @@ class Cement {
 			}
 		})
 		this.level.Breakaway.tile.forEach((gp) => {
-			if(gp['-x'] < this.width / 40) {
-				this.blocks.push(new FallingBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+			if(gp['-x'] < this.width / 120) {
+				this.blocks.push(new FallingBlock(gp['-x']*120 - this.scroll, gp['-y']*40));
 			}
 
 		})
@@ -56,9 +56,9 @@ class Cement {
 
 		this.level.Breakaway.tile.forEach((gp) => {
 			if(this.scroll % 40 == 0
-				&& (gp['-x'] == Math.floor(this.scroll / 40)
-				|| gp['-x'] == Math.floor((this.scroll + this.width) / 40))) {
-				this.blocks.push(new FallingBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+				&& (gp['-x'] == Math.floor(this.scroll / 120)
+				|| gp['-x'] == Math.floor((this.scroll + this.width) / 120))) {
+				this.blocks.push(new FallingBlock(gp['-x']*120 - this.scroll, gp['-y']*40));
 			}
 		})
 	}
