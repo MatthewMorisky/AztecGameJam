@@ -13,7 +13,8 @@ class Player extends Stoppable {
 		this.jumpCount = this.jumpLimit;
 		this.isOnTop = false;
 		this.level = 1;
-		this.hasCheckpoint = false;
+		this.saveX = this.x;
+		this.saveY = this.y;
 		
 	}
 
@@ -133,6 +134,14 @@ class Player extends Stoppable {
 			
 
 	}
+	die()
+	{
+		this.x = this.saveX;
+		this.y = this.saveY;
+
+	}
+
+
 	
 
 }
