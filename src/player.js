@@ -36,7 +36,13 @@ class Player extends Stoppable {
 		}
 	}
 	move(dir) {
-		this.xspeed = dir;
+		if((this.x > 700 && dir > 0) || (this.x < 400 && dir < 0)) {
+			this.xspeed = 0;
+			lvl.shift(dir < 0 ? -8 : 8);
+		}
+		else {
+			this.xspeed = dir;
+		}
 	}
 
 	slow() {
