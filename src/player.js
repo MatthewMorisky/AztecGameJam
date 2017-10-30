@@ -38,7 +38,7 @@ class Player extends Stoppable {
 	move(dir) {
 		if((this.x > 700 && dir > 0) || (this.x < 400 && dir < 0)) {
 			this.xspeed = 0;
-			lvl.shift(dir < 0 ? -8 : 8);
+			lvl.shift(dir < 0 ? -4 : 4);
 		}
 		else {
 			this.xspeed = dir;
@@ -51,24 +51,6 @@ class Player extends Stoppable {
 		}
 		if (Math.abs(this.xspeed) < 1) {
 
-			if ((this.isRight === true) && (this.level === 1)) {
-				this.changeImage('img/LookRight.png');
-			}
-			if ((this.isRight === false) && (this.level === 1)) {
-				this.changeImage('img/LookLeft.png')
-			}
-			if ((this.isRight === true) && (this.level === 2) && (this.hasArm)) {
-				this.changeImage('img/BonyWithTorsoAndArmRight.png')
-			}
-			if ((this.isRight === false) && (this.level === 2) && (this.hasArm)) {
-				this.changeImage('img/BonyWithTorsoAndArmLeft.png')
-			}
-			if ((this.isRight === true) && (this.level === 2) && (!this.hasArm)) {
-				this.changeImage('img/BonyWithTorsoRight.png')
-			}
-			if ((this.isRight === false) && (this.level === 2) && (!this.hasArm)) {
-				this.changeImage('img/BonyWithTorsoLeft.png')
-			}
 		}
 	}
 	armThrow() {
@@ -114,6 +96,27 @@ class Player extends Stoppable {
 			if(!this.isOnTop) {
 				this.jumpCount=0;
 			}
+		}
+		else {
+			if ((this.isRight === true) && (this.level === 1)) {
+				this.changeImage('img/LookRight.png');
+			}
+			if ((this.isRight === false) && (this.level === 1)) {
+				this.changeImage('img/LookLeft.png')
+			}
+			if ((this.isRight === true) && (this.level === 2) && (this.hasArm)) {
+				this.changeImage('img/BonyWithTorsoAndArmRight.png')
+			}
+			if ((this.isRight === false) && (this.level === 2) && (this.hasArm)) {
+				this.changeImage('img/BonyWithTorsoAndArmLeft.png')
+			}
+			if ((this.isRight === true) && (this.level === 2) && (!this.hasArm)) {
+				this.changeImage('img/BonyWithTorsoRight.png')
+			}
+			if ((this.isRight === false) && (this.level === 2) && (!this.hasArm)) {
+				this.changeImage('img/BonyWithTorsoLeft.png')
+			}
+
 		}
 		
 	}
