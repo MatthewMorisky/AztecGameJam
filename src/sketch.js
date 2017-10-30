@@ -9,10 +9,10 @@ function setup() {
 	bg = new Thing(0,0,0,0,new Hitbox(-100,-100,0,0), 'img/background1-1.png', 'background');
 	player = new Player(80,500);
 	//block = new Block();
-	checkpoint0 = new Checkpoint(120,height-80, 0);
-	ghost = new Ghost(800, 0);
+	//checkpoint0 = new Checkpoint(120,height-80, 0);
+	//ghost = new Ghost(800, 0);
 	//torso = new Torso(480, height - 40);
-	bone = new Bone(400,height - 30);
+	//bone = new Bone(400,height - 30);
 	//fallingBlock = new FallingBlock(600, height);
 	scoreBoard = new ScoreBoard();
 	dialog = new Dialog();
