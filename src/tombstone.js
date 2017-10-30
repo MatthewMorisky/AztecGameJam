@@ -5,7 +5,7 @@ class Tombstone extends Thing
 
 		super(x, y, 0, 0, new Hitbox(0, 0, 40, 40), 'img/tombstone2-1.png', 'tombstone');
 		this.sideLength = 40;
-	
+		this.standable=true;
 	}
 	update() {
 		super.update();

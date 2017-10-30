@@ -15,8 +15,14 @@ class Cement {
 		});
 		this.level.Platform.tile.forEach((gp) => {
 			if(gp['-x'] < this.width / 40) {
-				this.blocks.push(new Ground(gp['-x']*40 - this.scroll, gp['-y']*40));
+				this.blocks.push(new StaticBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
 			}
+		})
+		this.level.Stone.tile.forEach((gp) => {
+			if(gp['-x'] < this.width / 40) {
+				this.blocks.push(new Tombstone(gp['-x']*40 - this.scroll, gp['-y']*40));
+			}
+
 		})
 		this.level.Breakaway.tile.forEach((gp) => {
 			if(gp['-x'] < this.width / 120) {
@@ -24,6 +30,7 @@ class Cement {
 			}
 
 		})
+		
 	}
 
 	shift(delta) {
@@ -50,7 +57,15 @@ class Cement {
 			if(this.scroll % 40 == 0
 				&& (gp['-x'] == Math.floor(this.scroll / 40)
 				|| gp['-x'] == Math.floor((this.scroll + this.width) / 40))) {
-				this.blocks.push(new Ground(gp['-x']*40 - this.scroll, gp['-y']*40));
+				this.blocks.push(new StaticBlock(gp['-x']*40 - this.scroll, gp['-y']*40));
+			}
+		})
+
+		this.level.Stone.tile.forEach((gp) => {
+			if(this.scroll % 40 == 0
+				&& (gp['-x'] == Math.floor(this.scroll / 40)
+				|| gp['-x'] == Math.floor((this.scroll + this.width) / 40))) {
+				this.blocks.push(new Tombstone(gp['-x']*40 - this.scroll, gp['-y']*40));
 			}
 		})
 
