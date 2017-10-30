@@ -5,11 +5,11 @@ let height = 350;
 let lvl;
 
 function setup() {
-	player = new Player(80,height - 80);
+	player = new Player(80,500);
 	//block = new Block();
 
 	//torso = new Torso(480, height - 40);
-	//bone = new Bone(400,height - 30);
+	bone = new Bone(400,height - 30);
 	//fallingBlock = new FallingBlock(600, height);
 	scoreBoard = new ScoreBoard();
 
